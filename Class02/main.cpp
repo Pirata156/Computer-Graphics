@@ -5,9 +5,6 @@
 #endif
 
 #include <cmath>
-#include <iostream>
-
-using namespace std;
 
 /* Setting all global variables inside a structure as to understand where they are global or local variables */
 class Global {
