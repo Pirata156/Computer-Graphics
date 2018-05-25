@@ -18,4 +18,4 @@ Practical Computer Graphics classes exercises.
 - Create a menu
 
 **Assignement:** Draw a piramid, translate and rotate it using keyboard. Use mouse for menu with drawing options.
-![Class02](https://github.com/Pirata156/Computer-Graphics/blob/master/Class02/Class02_3dDrawing.png "3D Drawing")
+![Class02](https://github.com/Pirata156/Computer-Graphics/blob/master/Class02/Result/Class02_3dDrawing.png "3D Drawing")
