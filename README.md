@@ -28,3 +28,13 @@ Practical Computer Graphics classes exercises.
 - **Drawing a cylinder using polar coordinates**
 
 ![Class03](https://github.com/Pirata156/Computer-Graphics/blob/master/Class03/Result/class03_camera_motion.png "Cylinder in Explorer Mode")
+
+
+### Class 4 - Performance
+- **Immediate mode versus arrays modes**
+- Vertex Buffer Arrays with and without indexes
+- Exploring indexes locality
+- **Measuring frames per second**
+
+![Class04](https://github.com/Pirata156/Computer-Graphics/blob/master/Class04/Result/class04_performance.png "Cylinder in Immediate Drawing Mode")
+
