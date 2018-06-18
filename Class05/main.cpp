@@ -30,6 +30,7 @@ public:
     float inner_radius;         // inner radius - for the cowboys
     float tree_size;            // height of the trees
     int number_trees;           // how many trees you want to draw
+    float movement_angle;       // angle of movement for animation
 
 	Global() {
 		camera_radius = 100.0f;
@@ -46,6 +47,7 @@ public:
 		inner_radius = 15.0f;
 		tree_size = 5.0f;
 		number_trees = 250;
+		movement_angle = 0.0f;
 	}
 };
 
@@ -136,7 +138,7 @@ void cowboysProtecting() {
     glColor3f(0.0f, 0.3f, 1.0f);
     for(i = 0; i < 8; i++) {
         glPushMatrix();
-        glRotatef(i * angle, 0.0f, 1.0f, 0.0f);
+        glRotatef((i * angle) - global.movement_angle, 0.0f, 1.0f, 0.0f);
         glTranslatef(global.inner_radius, 1.0f, 0.0f);
         glutSolidTeapot(1.0f);
         glPopMatrix();
@@ -149,7 +151,7 @@ void indiansAttacking() {
     glColor3f(1.0f, 0.3f, 0.0f);
     for(i = 0; i < 16; i++) {
         glPushMatrix();
-        glRotatef((i * angle) - 90.0f, 0.0f, 1.0f, 0.0f);
+        glRotatef((i * angle) - 90.0f + global.movement_angle, 0.0f, 1.0f, 0.0f);
         glTranslatef(0.0f, 1.0f, global.outter_radius);
         glutSolidTeapot(1.0f);
         glPopMatrix();
@@ -177,6 +179,8 @@ void renderScene() {
     cowboysProtecting();
     /* Indians in the outter radius */
     indiansAttacking();
+
+    global.movement_angle += 1.0f;
 	// End of frame
 	glutSwapBuffers();
 }
@@ -251,6 +255,7 @@ int main(int argc, char **argv) {
 		
 	// Required callback registry
 	glutDisplayFunc(renderScene);
+	glutIdleFunc(renderScene);
 	glutReshapeFunc(changeSize);
 	
 	// Callback registration for keyboard processing
