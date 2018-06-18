@@ -35,6 +35,13 @@ Practical Computer Graphics classes exercises.
 - Vertex Buffer Arrays with and without indexes
 - Exploring indexes locality
 - **Measuring frames per second**
+- **Comparative performance analysis**
 
 ![Class04](https://github.com/Pirata156/Computer-Graphics/blob/master/Class04/Result/class04_performance.png "Cylinder in Immediate Drawing Mode")
 
+### Class 5 - Building a 3D World
+- **Apply geometric transformations**
+- **Build a 3D scenario**
+- **Perform a simple animation**
+
+![Class05](https://github.com/Pirata156/Computer-Graphics/blob/master/Class05/Result/class05_3d_world.png "Indians and Cowboys")
